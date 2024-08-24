@@ -12,21 +12,21 @@ def remove_characters_from_file(file_path, characters):
         file.write(content)
 
 def main():
-    # Create a Tkinter root window (it will remain hidden)
+    
     root = tk.Tk()
     root.withdraw()
     
-    # Ask the user to select a text file
+    
     file_path = filedialog.askopenfilename(title="Select a text file", filetypes=[("Text files", "*.txt")])
     
     if file_path:
-        # Ask the user to input the characters to remove
+        
         chars_to_remove = input("Enter the characters you want to remove separated by a comma: ")
         
-        # Split the input by commas to get a list of characters
+        
         characters = [char.strip() for char in chars_to_remove.split(',')]
         
-        # Remove the characters from the file
+       
         remove_characters_from_file(file_path, characters)
         
         print("Characters removed successfully.")
